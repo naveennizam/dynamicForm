@@ -1,9 +1,15 @@
 // import '../dist/dynamicforms.js'; // Import sources as module
-//const {dynamicForms} = require('@simomosi/dynamic-forms');
- import dynamicForms from '@simomosi/dynamic-forms';
-import { parse } from 'node-html-parser';
+const express = require('express');
+//const dynamicForms = require("@simomosi/dynamic-forms");
+//import dynamicForms from '@simomosi/dynamic-forms';
+//import { parse } from 'node-html-parser';
 // console.log(dynamicForms);
-
+const app = express()
+// const dotenv = require('dotenv').config();
+const PORT = 4000;
+app.listen(PORT, () => {
+  console.log((`Server is running ${PORT}`));
+});
 const formConfiguration = {
   id: "jsonPlaceholder",
   debug: true,
