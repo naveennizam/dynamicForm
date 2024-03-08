@@ -1,0 +1,23 @@
+{
+  "name": "sort",
+  "version": "1.0.0",
+  "description": "",
+  
+  "browser": "dist/dynamicforms.min.js",
+  "main": "index.html",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@simomosi/dynamic-forms": "^2.0.0",
+    "bootstrap": "^5.3.3",
+    "node-html-parser": "^6.1.12"
+  },
+  "type": "module"
+}

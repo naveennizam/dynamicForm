@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="h1">
+        DynamicForms sandbox
+        <div
+          id="spinner"
+          class="spinner-border"
+          role="status"
+          style="display: none"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <p>DynamicForms sandbox: test fields interactions!</p>
+      <p>Tip: open developer tools and keep an eye on console/network tabs.</p>
+
+      <form id="jsonPlaceholder">
+        <p class="mt-4">Dynamic Select</p>
+        <div class="row">
+          <div class="col-1">
+            <label for="user">Users</label>
+          </div>
+          <div class="col-5">
+            <select id="user" name="user">
+              <option value="" selected></option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-1">
+            <label for="post">Posts</label>
+          </div>
+          <div class="col-5">
+            <select id="post" name="post">
+              <option value="" selected></option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-1">
+            <label for="comment">Comments</label>
+          </div>
+          <div class="col-5">
+            <select id="comment" name="comment">
+              <option value="" selected></option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-1">
+            <label for="album">Albums</label>
+          </div>
+          <div class="col-5">
+            <select id="album" name="album">
+              <option value="" selected></option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-1">
+            <label for="photo">Photo</label>
+          </div>
+          <div class="col-5">
+            <select id="photo" name="photo">
+              <option value="" selected></option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-1">
+          <div class="col-1">
+            <label for="todo">Todo</label>
+          </div>
+          <div class="col-5">
+            <select id="todo" name="todo">
+              <option value="" selected></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-2">
+            <p class="mt-4">Dynamic Checkbox</p>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="visibility-checkbox"
+                name="visibility-checkbox"
+                class="form-check-input"
+                checked
+              />
+              <label for="visibility-checkbox" class="form-check-label">
+                Field Visible
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="readonly-checkbox"
+                name="readonly-checkbox"
+                class="form-check-input"
+              />
+              <label for="readonly-checkbox" class="form-check-label">
+                Field Readonly
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <p class="mt-4">Dynamic Input</p>
+            <input
+              type="text"
+              class="form-control"
+              name="checkbox-target-field"
+              placeholder="Visible? Readonly?"
+            />
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-2">
+            <p class="mt-4">Dynamic Radio Button</p>
+            Rows number:
+            <div class="form-check">
+              <input
+                type="radio"
+                id="rows-radio-1"
+                name="rows-radio"
+                value="1"
+                class="form-check-input"
+                checked
+              />
+              <label for="rows-radio-1" class="form-check-label">1 Row</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="rows-radio-2"
+                name="rows-radio"
+                value="2"
+                class="form-check-input"
+              />
+              <label for="rows-radio-2" class="form-check-label">2 Rows</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="rows-radio-3"
+                name="rows-radio"
+                value="3"
+                class="form-check-input"
+              />
+              <label for="rows-radio-3" class="form-check-label">3 Rows</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <p class="mt-4">Dynamic Textarea</p>
+            <textarea
+              class="form-control"
+              name="radio-target-textarea"
+              rows="1"
+              placeholder="How many rows?"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input
+                type="radio"
+                id="formEnabledOn"
+                name="formEnabled"
+                value="ON"
+                class="custom-control-input"
+                checked
+              />
+              <label class="custom-control-label" for="formEnabledOn">ON</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input
+                type="radio"
+                id="formEnabledOff"
+                name="formEnabled"
+                value="OFF"
+                class="custom-control-input"
+              />
+              <label class="custom-control-label" for="formEnabledOff"
+                >OFF</label
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+        <!-- <script type="module"> import './node_modules/@simomosi/dynamic-forms/dist/dynamicforms.min.js'; </script> -->
+
+
+    <!-- CDN -->
+    <!-- <script src='https://unpkg.com/@simomosi/dynamic-forms@latest'></script> -->
+    <!-- Import sources as script tag -->
+    
+    
+</body>
+<script  src='form_handler.js'></script>
+</html>
